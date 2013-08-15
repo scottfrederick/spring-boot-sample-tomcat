@@ -1,0 +1,27 @@
+buildscript {
+	repositories {
+		mavenLocal()
+	  maven { url "http://repo.springsource.org/libs-milestone-local" }
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:0.5.0.M1")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+repositories {
+	mavenCentral()
+	maven { url "http://repo.springsource.org/libs-milestone-local" }
+}
+
+dependencies {
+	compile("org.springframework.boot:spring-boot-starter-web:0.5.0.M1")
+	testCompile("junit:junit:4.11")
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '1.6'
+}
+
