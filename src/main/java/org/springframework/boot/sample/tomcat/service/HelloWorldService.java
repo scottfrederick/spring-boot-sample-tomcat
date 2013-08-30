@@ -25,8 +25,11 @@ public class HelloWorldService {
 	@Value("${name:World}")
 	private String name;
 
+  private long counter = 0;
+
 	public String getHelloMessage() {
-		return "Hello " + this.name;
+    counter++;
+		return "Hello " + this.name + ". You have been here " + counter + " times.";
 	}
 
 }

@@ -5,7 +5,7 @@ buildscript {
 	  maven { url "http://repo.springsource.org/libs-milestone-local" }
 	}
 	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:0.5.0.M1")
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:0.5.0.M2")
 	}
 }
 
@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-	compile("org.springframework.boot:spring-boot-starter-web:0.5.0.M1")
+	compile("org.springframework.boot:spring-boot-starter-web:0.5.0.M2")
 	testCompile("junit:junit:4.11")
 }
 

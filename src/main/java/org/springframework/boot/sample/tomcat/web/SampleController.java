@@ -22,6 +22,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.IOException;
+
 @Controller
 public class SampleController {
 
@@ -32,5 +34,17 @@ public class SampleController {
 	@ResponseBody
 	public String helloWorld() {
 		return this.helloWorldService.getHelloMessage();
+	}
+	
+  @RequestMapping("/npe")
+	@ResponseBody
+	public String throwNullPointerException() {
+    throw new NullPointerException("simulated exception");
+	}
+	
+  @RequestMapping("/ioe")
+	@ResponseBody
+	public String throwIOException() throws IOException {
+    throw new IOException("simulated exception");
 	}
 }
