@@ -6,10 +6,3 @@ applications:
   host: spring-boot-${random-word}
   domain: cfapps.io
   path: build/libs/spring-boot-sample-tomcat.jar
-  services:
-    newrelic:
-      label: newrelic
-      provider: newrelic
-      version: n/a
-      plan: standard
-  buildpack: https://github.com/cloudfoundry/java-buildpack
