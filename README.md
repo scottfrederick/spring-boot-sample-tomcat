@@ -7,6 +7,5 @@ To build:
     
 To run: 
    
-    $ ./run.sh
+    $ java -jar build/libs/spring-boot-sample-tomcat.jar
     
-Modify `run.sh` to start the app with or without the New Relic agent enabled. 
